@@ -35,3 +35,6 @@ The pinned parameter files `apparatus/ACC_PINS_*.json` record the SHA-256 of the
 
 ## What is not included
 Raw run directories (labels, logs), the instrumented client builds, the cluster launch scripts, and the code of the earlier, withdrawn evaluation. The scripts in `analysis_scripts/` therefore document how each table was computed from the raw data; they cannot be re-run without it.
+
+## License
+MIT License (see `LICENSE`). The data tables and documents are released under the same terms.
