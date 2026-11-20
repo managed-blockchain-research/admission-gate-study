@@ -1,0 +1,156 @@
+{
+ "files": {
+  "acc/acc_raac_run_11oo.sbatch": "849080b3d4259b6095242b57697f0af28a37d042d5cdd722b7003515ff0ad33b",
+  "acc/acc_selfcheck_11oo.py": "21be09670172affc6be280ab6069f6dab00fa1fb8db1b351525b3569c600e8ff",
+  "acc/acc_raac_checked_11oo.sbatch": "984455b0dd3cce6a7441a40303c4892d5430e63728e963314410534f2abefe17",
+  "acc/oo/sample_service/serve_unified.py": "f21e8e97ab8b2620bca906046fffaaa63edd988ded9071681641efd95e6b9464",
+  "acc/oo/sample_service/detlib.py": "eef45659fc4b8d788772954b42c329081341eca14b472d2706ac13911fa2ed32",
+  "acc/oo/sample_service/ml_model.py": "07620e10c666ae18d4e2b29ecb41c1b85c864bdad7e3d5987d3ba498579aec31"
+ },
+ "besu_main_jar_sha256": "2438c9a018b63e43ef802754c4e74782559b98e869643762a245868c6d05e01e",
+ "nm_bin": "./impl/nm/bin",
+ "nm_dll_sha256": "4ad770c8c18a889ecbb8c321d51f0ea6addc35b970afbf9c0155f2fc36eb6199",
+ "nm_txpool_sha256": "6923d71114a90678f6b4751f3162bd7bb05d79eed00b5d08f336625144ce35c8",
+ "blocks": {
+  "S1": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    64011,
+    64014
+   ],
+   "smoke_seed": 64099,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.1",
+   "arms": [
+    "none",
+    "PressureOnly",
+    "PressureOnlyS5",
+    "PressureOnlyS15"
+   ]
+  },
+  "H1": {
+   "kind": "nm",
+   "token_re": "^nm:1024m:100:g1:OFF:36:125000000:(\\d+):A$",
+   "seeds": [
+    64111,
+    64114
+   ],
+   "smoke_seed": 64199,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.1",
+   "arms": [
+    "none",
+    "SizeStatic",
+    "PressureOnly"
+   ]
+  },
+  "H3": {
+   "kind": "nm",
+   "token_re": "^nm:3072m:100:g1:OFF:36:125000000:(\\d+):A$",
+   "seeds": [
+    64121,
+    64124
+   ],
+   "smoke_seed": 64198,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.1",
+   "arms": [
+    "none",
+    "SizeStatic",
+    "PressureOnly"
+   ]
+  },
+  "H4": {
+   "kind": "nm",
+   "token_re": "^nm:4096m:100:g1:OFF:36:125000000:(\\d+):A$",
+   "seeds": [
+    64131,
+    64134
+   ],
+   "smoke_seed": 64197,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.1",
+   "arms": [
+    "none",
+    "SizeStatic",
+    "PressureOnly"
+   ]
+  },
+  "H1L": {
+   "kind": "nm",
+   "token_re": "^nm:1024m:100:g1:OFF:36:125000000:(\\d+):A$",
+   "seeds": [
+    64141,
+    64144
+   ],
+   "smoke_seed": 64199,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.0333",
+   "arms": [
+    "none",
+    "SizeStatic"
+   ]
+  },
+  "H3L": {
+   "kind": "nm",
+   "token_re": "^nm:3072m:100:g1:OFF:36:125000000:(\\d+):A$",
+   "seeds": [
+    64151,
+    64154
+   ],
+   "smoke_seed": 64209,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.0333",
+   "arms": [
+    "none",
+    "SizeStatic"
+   ]
+  },
+  "H4L": {
+   "kind": "nm",
+   "token_re": "^nm:4096m:100:g1:OFF:36:125000000:(\\d+):A$",
+   "seeds": [
+    64161,
+    64164
+   ],
+   "smoke_seed": 64219,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.0333",
+   "arms": [
+    "none",
+    "SizeStatic"
+   ]
+  },
+  "H1B": {
+   "kind": "nm",
+   "token_re": "^nm:1024m:100:g1:OFF:36:125000000:(\\d+):A$",
+   "seeds": [
+    64171,
+    64174
+   ],
+   "smoke_seed": 64179,
+   "burst": "none",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.1",
+   "arms": [
+    "none"
+   ]
+  }
+ }
+}

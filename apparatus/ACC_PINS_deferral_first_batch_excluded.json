@@ -1,0 +1,146 @@
+{
+ "files": {
+  "acc/acc_raac_run_11nn.sbatch": "ec07e2acd9beea6e65cb75115f51feec893a5afefe2d8def17a56d241e31fd93",
+  "acc/acc_selfcheck_11nn.py": "76def37067ad37a9d33fa983a503284261c2193c47e66424383da0c58bf3ca0b",
+  "acc/acc_raac_checked_11nn.sbatch": "089b5f8cbd30a93fa2c6418f8998e5eb497bd40bed95b69a68f8704ca6707418",
+  "acc/nn/raacV5BurstDefer.js": "25516a8ae1dc73c571d08bb0c387d62e6c44bf838eed2a797799520496eb94cf",
+  "acc/nn/shaper_service/serve_unified.py": "8a472d8465557c05be1c17f650738dbabb38184722327935eb16fd918b8835ea",
+  "acc/nn/shaper_service/detlib.py": "eef45659fc4b8d788772954b42c329081341eca14b472d2706ac13911fa2ed32",
+  "acc/nn/shaper_service/ml_model.py": "07620e10c666ae18d4e2b29ecb41c1b85c864bdad7e3d5987d3ba498579aec31",
+  "acc/kk/budget_service/serve_unified.py": "a2db678513505a6bf9167f00d5435fddfc9343efff7a106948801cc08bafbb99",
+  "acc/kk/budget_service/detlib.py": "eef45659fc4b8d788772954b42c329081341eca14b472d2706ac13911fa2ed32",
+  "acc/kk/budget_service/ml_model.py": "07620e10c666ae18d4e2b29ecb41c1b85c864bdad7e3d5987d3ba498579aec31"
+ },
+ "besu_main_jar_sha256": "2438c9a018b63e43ef802754c4e74782559b98e869643762a245868c6d05e01e",
+ "nm_bin": "./impl/nm/bin",
+ "nm_dll_sha256": "4ad770c8c18a889ecbb8c321d51f0ea6addc35b970afbf9c0155f2fc36eb6199",
+ "nm_txpool_sha256": "6923d71114a90678f6b4751f3162bd7bb05d79eed00b5d08f336625144ce35c8",
+ "blocks": {
+  "D1": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    63911,
+    63914
+   ],
+   "smoke_seed": 63999,
+   "burst": "mixed",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.1",
+   "arms": [
+    "none",
+    "SizeStatic",
+    "BudgetR250",
+    "ShapeR250D60",
+    "ShapeR250D180"
+   ],
+   "DUR": 360
+  },
+  "D2": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    63921,
+    63924
+   ],
+   "smoke_seed": 63998,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.1",
+   "arms": [
+    "none",
+    "SizeStatic",
+    "BudgetR250",
+    "ShapeR250D60",
+    "ShapeR250D180"
+   ],
+   "DUR": 360
+  },
+  "D3": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    63931,
+    63934
+   ],
+   "smoke_seed": 63997,
+   "burst": "lookalike",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.0333",
+   "arms": [
+    "none",
+    "SizeStatic",
+    "BudgetR250",
+    "ShapeR250D60",
+    "ShapeR250D180"
+   ],
+   "DUR": 360
+  },
+  "D1R": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    63911,
+    63914
+   ],
+   "smoke_seed": 63999,
+   "burst": "mixed",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.1",
+   "arms": [
+    "none",
+    "SizeStatic",
+    "BudgetR250",
+    "ShapeR250D60",
+    "ShapeR250D180"
+   ],
+   "DUR": 360
+  },
+  "D2R": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    63921,
+    63924
+   ],
+   "smoke_seed": 63998,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.1",
+   "arms": [
+    "none",
+    "SizeStatic",
+    "BudgetR250",
+    "ShapeR250D60",
+    "ShapeR250D180"
+   ],
+   "DUR": 360
+  },
+  "D3R": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    63931,
+    63934
+   ],
+   "smoke_seed": 63997,
+   "burst": "lookalike",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.0333",
+   "arms": [
+    "none",
+    "SizeStatic",
+    "BudgetR250",
+    "ShapeR250D60",
+    "ShapeR250D180"
+   ],
+   "DUR": 360
+  }
+ }
+}

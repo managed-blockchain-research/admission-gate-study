@@ -1,0 +1,170 @@
+{
+ "files": {
+  "acc/acc_raac_run_11pp.sbatch": "3226b48e276f3cce45ca17c779446301b019dafed68c11c204a9245dbf575579",
+  "acc/acc_selfcheck_11pp.py": "811b9f1ad4772b75cce3afc79c283c31f4ad507ac0734d2123860f98c20258c3",
+  "acc/acc_raac_checked_11pp.sbatch": "94b4958b94b949902316295899b255454e5f7f8a2be66cec84172d9285fc6ceb",
+  "acc/pp/raacV5BurstHist.js": "53175dab4887ff2fb661420ec2780e44ca750b41190b76d8e1a5ab6cc5d4b301",
+  "acc/pp/hist_service/serve_unified.py": "281e8888c9dc2938e858a05aebcd759296c02aa91d39bc526a378330b20b3e37",
+  "acc/pp/hist_service/detlib.py": "eef45659fc4b8d788772954b42c329081341eca14b472d2706ac13911fa2ed32",
+  "acc/pp/hist_service/ml_model.py": "07620e10c666ae18d4e2b29ecb41c1b85c864bdad7e3d5987d3ba498579aec31",
+  "acc/mm/sender_service/serve_unified.py": "6f080517804edcf5ddb3429e74bbeb6ba7e6c9be68d21c4eed3d3eede6ac500a",
+  "acc/mm/sender_service/detlib.py": "eef45659fc4b8d788772954b42c329081341eca14b472d2706ac13911fa2ed32",
+  "acc/mm/sender_service/ml_model.py": "07620e10c666ae18d4e2b29ecb41c1b85c864bdad7e3d5987d3ba498579aec31"
+ },
+ "besu_main_jar_sha256": "2438c9a018b63e43ef802754c4e74782559b98e869643762a245868c6d05e01e",
+ "nm_bin": "./impl/nm/bin",
+ "nm_dll_sha256": "4ad770c8c18a889ecbb8c321d51f0ea6addc35b970afbf9c0155f2fc36eb6199",
+ "nm_txpool_sha256": "6923d71114a90678f6b4751f3162bd7bb05d79eed00b5d08f336625144ce35c8",
+ "blocks": {
+  "Y1": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    64211,
+    64214
+   ],
+   "smoke_seed": 64299,
+   "burst": "hist",
+   "A0": 60,
+   "A1": 180,
+   "af": "",
+   "nA": 2,
+   "nL": 6,
+   "warm": 0,
+   "fresh": 0,
+   "arms": [
+    "none",
+    "SizeStatic",
+    "SenderBucket",
+    "SenderLow10",
+    "SenderHigh400",
+    "HistBucket"
+   ]
+  },
+  "Y2": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    64221,
+    64224
+   ],
+   "smoke_seed": 64298,
+   "burst": "hist",
+   "A0": 60,
+   "A1": 180,
+   "af": "",
+   "nA": 12,
+   "nL": 6,
+   "warm": 0,
+   "fresh": 0,
+   "arms": [
+    "none",
+    "SizeStatic",
+    "SenderBucket",
+    "SenderLow10",
+    "SenderHigh400",
+    "HistBucket"
+   ]
+  },
+  "Y3": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    64231,
+    64234
+   ],
+   "smoke_seed": 64297,
+   "burst": "hist",
+   "A0": 60,
+   "A1": 180,
+   "af": "",
+   "nA": 12,
+   "nL": 6,
+   "warm": 10,
+   "fresh": 0,
+   "arms": [
+    "none",
+    "SizeStatic",
+    "SenderBucket",
+    "SenderLow10",
+    "SenderHigh400",
+    "HistBucket"
+   ]
+  },
+  "Y4": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    64241,
+    64244
+   ],
+   "smoke_seed": 64296,
+   "burst": "hist",
+   "A0": 60,
+   "A1": 180,
+   "af": "",
+   "nA": 2,
+   "nL": 1,
+   "warm": 0,
+   "fresh": 0,
+   "arms": [
+    "none",
+    "SizeStatic",
+    "SenderBucket",
+    "SenderLow10",
+    "SenderHigh400",
+    "HistBucket"
+   ]
+  },
+  "Y5": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    64251,
+    64254
+   ],
+   "smoke_seed": 64295,
+   "burst": "hist",
+   "A0": 60,
+   "A1": 180,
+   "af": "",
+   "nA": 2,
+   "nL": 6,
+   "warm": 60,
+   "fresh": 0,
+   "arms": [
+    "none",
+    "SizeStatic",
+    "SenderBucket",
+    "SenderLow10",
+    "SenderHigh400",
+    "HistBucket"
+   ]
+  },
+  "Y6": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    64261,
+    64264
+   ],
+   "smoke_seed": 64294,
+   "burst": "hist",
+   "A0": 60,
+   "A1": 180,
+   "af": "",
+   "nA": 2,
+   "nL": 6,
+   "warm": 0,
+   "fresh": 1,
+   "arms": [
+    "none",
+    "SizeStatic",
+    "SenderBucket",
+    "SenderLow10",
+    "SenderHigh400",
+    "HistBucket"
+   ]
+  }
+ }
+}

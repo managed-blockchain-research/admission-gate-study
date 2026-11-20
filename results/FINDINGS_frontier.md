@@ -1,0 +1,11 @@
+# Cost-benefit frontier and benign-harm breakdown (offline; frontier_fairness.md; mixed_zgc_sustained_pulse + global_bucket_sweeps Besu G1 512 MB; written 2026-11-19)
+## Frontier (attack block rate vs benign cost vs benign receipts; per block, mean over seeds; same-seed gain vs none)
+- Blanket pressure shedding (PressureOnly) buys receipts with benign rejections: M +6,418 receipts at 12.1% of benign requests rejected (attack block 0.11); TS +7,197 at 14.1% (0.14); TP +5,442 at 12.3% (0.07). The attack share removed is small (0.07-0.14); the gain comes from shedding load of any kind.
+- Class-selective rules reject no benign (small/ordinary) request: SizeStatic gain M +7,369, TS +10,739, TP +2,186, I1 +2,687, I3 +7,926, I6 +10,965, at the price of rejecting every look-alike (LA rej share 1.0 in M, MX, L1). Budget arms also reject no ordinary benign request but reject 58-92% of look-alikes when they share the bucket (MX).
+- Graded/sticky size rules sit between none and SizeStatic: SizeGraded M +694, TS +231, TP +157; SizeSticky TS +9,103, TP +1,219.
+- Ground-truth filter (OracleBlock, M): attack block 1.000, no benign or look-alike rejected, gain +5,202 (below SizeStatic, which also drops the look-alike load).
+## Benign harm of blanket/random shedding (counts pooled over seeds; phases by scheduled time)
+- Rejections are spread evenly over transaction classes: PressureOnly M: SL 12.35%, SH 12.23%, M 11.41%, L 12.27%; TS: 14.16 / 13.76 / 14.56 / 14.07%. No class is protected; the rejection share per sending worker is nearly uniform (max 0.129-0.153 vs mean 0.122-0.141).
+- Timing: PressureOnly rejects benign requests BEFORE the attack window (4.4-7.8% of requests in 0-60 s), during it (11.3-15.1%) and AFTER it (17.5-20.3% in the last phase): the lagging pressure signal sheds benign traffic when the attack is absent or already over. RandShed48 is flat in time (about 4.8-5.1%) by design.
+## Allowed / not allowed
+Allowed: the descriptive statements above for these blocks. Not allowed: "pressure-graded shedding is unfair to benign users in general" (one pressure signal, one heap, one benign mix), any causal statement about the signal (lag is inferred from timing only), any deployment-fairness claim by sender (workers are load-generator accounts with identical rates).
