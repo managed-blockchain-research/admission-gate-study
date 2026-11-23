@@ -1,0 +1,15 @@
+{
+ "artifact": "sup_gb.joblib",
+ "artifact_sha256": "14e67fd76a74a56dc6f7c5f66de0ee4736d009df92bfae5b8a63eb87aa0ddbfc",
+ "n_benign": 60000,
+ "n_attack": 7200,
+ "sklearn": "1.8.0",
+ "features": [
+  "vcr_log",
+  "economic_density_log",
+  "resource_intensity",
+  "gas_price",
+  "gas_limit",
+  "bytecode_size"
+ ]
+}

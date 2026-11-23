@@ -1,0 +1,193 @@
+{
+ "files": {
+  "acc/acc_raac_run_11tt.sbatch": "28a62fa2b12071dcc47fd1822404ae6951848ca5ef7f076b66b85b0590658213",
+  "acc/acc_selfcheck_11tt.py": "d719fabdbca1204eab1ee4cef49e8c52da4db2dd667f1b29f0fa8bda16ec5309",
+  "acc/acc_raac_checked_11tt.sbatch": "d25adda66332ea96b477f85c19a6cfa7dbf2ba4009830aa5ce5bdd716212da40",
+  "acc/jj/raacV5BurstMixed.js": "1e26cd041139f34b63c41d35d015786d782effd12048796081f2175f4ec6320b",
+  "acc/jj/raacV5BurstOracleMixed.js": "48b172562d3e49fbab618cf7ddb9adcf17556092548b35736e27eabf165fe480",
+  "acc/jj/sticky_service/serve_unified.py": "633dec166447ecc360e2a6bc9742ed5e11ac2ae8b4e2b4b6d6e3bcb4056aee61",
+  "acc/jj/sticky_service/detlib.py": "eef45659fc4b8d788772954b42c329081341eca14b472d2706ac13911fa2ed32",
+  "acc/jj/sticky_service/ml_model.py": "07620e10c666ae18d4e2b29ecb41c1b85c864bdad7e3d5987d3ba498579aec31",
+  "acc/kk/budget_service/serve_unified.py": "a2db678513505a6bf9167f00d5435fddfc9343efff7a106948801cc08bafbb99",
+  "acc/kk/budget_service/detlib.py": "eef45659fc4b8d788772954b42c329081341eca14b472d2706ac13911fa2ed32",
+  "acc/kk/budget_service/ml_model.py": "07620e10c666ae18d4e2b29ecb41c1b85c864bdad7e3d5987d3ba498579aec31",
+  "acc/tt/raacV5BurstReal.js": "2e6b5e03173ead9e567cdaac66538688049d8e54b0941174fa585adcbfc65d49",
+  "acc/tt/sup_service/serve_unified.py": "a2db678513505a6bf9167f00d5435fddfc9343efff7a106948801cc08bafbb99",
+  "acc/tt/sup_service/detlib.py": "eef45659fc4b8d788772954b42c329081341eca14b472d2706ac13911fa2ed32",
+  "acc/tt/sup_service/ml_model.py": "1c9984b006e3a851641f66e07e15e776115e5a01e2db4831a0e3fa1a8d0cd0ff",
+  "acc/tt/sup_service/sup_gb.joblib": "14e67fd76a74a56dc6f7c5f66de0ee4736d009df92bfae5b8a63eb87aa0ddbfc",
+  "acc/tt/sup_service/sup_manifest.json": "64418200825f76d0841f17fbb8a71d5a91417b9aaa253a14348d64f148ffeb83",
+  "acc/tt/sup_service/train_supervised.py": "f32fe3939290be76f016b85aceb4aaf99f0fd9dc38cea506d86e847136790531"
+ },
+ "besu_main_jar_sha256": "2438c9a018b63e43ef802754c4e74782559b98e869643762a245868c6d05e01e",
+ "nm_bin": "<path>/diss_impl/nm/bin",
+ "nm_dll_sha256": "4ad770c8c18a889ecbb8c321d51f0ea6addc35b970afbf9c0155f2fc36eb6199",
+ "nm_txpool_sha256": "6923d71114a90678f6b4751f3162bd7bb05d79eed00b5d08f336625144ce35c8",
+ "blocks": {
+  "FCO": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    66501,
+    66503
+   ],
+   "smoke_seed": 66595,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.0333",
+   "arms": [
+    "SizeStatic",
+    "BudgetR125",
+    "PressureOnly"
+   ],
+   "em": "",
+   "rm": "",
+   "fc": "",
+   "ss": "90",
+   "sd": "20"
+  },
+  "FCC": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    66511,
+    66513
+   ],
+   "smoke_seed": 66595,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.0333",
+   "arms": [
+    "SizeStatic",
+    "BudgetR125",
+    "PressureOnly"
+   ],
+   "em": "",
+   "rm": "",
+   "fc": "true",
+   "ss": "90",
+   "sd": "20"
+  },
+  "FCZ": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    66521,
+    66523
+   ],
+   "smoke_seed": 66595,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.0333",
+   "arms": [
+    "SizeStatic",
+    "BudgetR125",
+    "PressureOnly"
+   ],
+   "em": "",
+   "rm": "",
+   "fc": "true",
+   "ss": "",
+   "sd": ""
+  },
+  "DQ1": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    66601,
+    66603
+   ],
+   "smoke_seed": 66695,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.0333",
+   "arms": [
+    "CPUramp",
+    "CPUrampLow",
+    "CPUrampMid",
+    "CircuitBreaker",
+    "SupGraded",
+    "SupStatic"
+   ],
+   "em": "",
+   "rm": "",
+   "fc": "",
+   "ss": "",
+   "sd": ""
+  },
+  "DMX": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    66611,
+    66613
+   ],
+   "smoke_seed": 66695,
+   "burst": "mixed",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.1",
+   "arms": [
+    "CPUramp",
+    "CPUrampLow",
+    "CPUrampMid",
+    "CircuitBreaker",
+    "SupGraded",
+    "SupStatic"
+   ],
+   "em": "",
+   "rm": "",
+   "fc": "",
+   "ss": "",
+   "sd": ""
+  },
+  "DZG": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:zgc:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    66621,
+    66623
+   ],
+   "smoke_seed": 66695,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.1",
+   "arms": [
+    "CPUramp",
+    "CircuitBreaker"
+   ],
+   "em": "",
+   "rm": "",
+   "fc": "",
+   "ss": "",
+   "sd": ""
+  },
+  "DNM": {
+   "kind": "nm",
+   "token_re": "^nm:2048m:100:g1:OFF:36:125000000:(\\d+):A$",
+   "seeds": [
+    66631,
+    66633
+   ],
+   "smoke_seed": 66695,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.1",
+   "arms": [
+    "CPUramp",
+    "CircuitBreaker"
+   ],
+   "em": "",
+   "rm": "",
+   "fc": "",
+   "ss": "",
+   "sd": ""
+  }
+ }
+}

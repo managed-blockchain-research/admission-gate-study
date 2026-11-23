@@ -2,7 +2,7 @@
 
 Companion material for the manuscript "What Can an Admission Gate Separate? A Controlled Characterization of Policies for Calldata-Heavy Transactions in Managed Ethereum Clients".
 
-The campaign (850 registered runs plus one excluded batch of 60) is organised in experiment families. Each file name carries a descriptive family name. The pre-registration document and the bodies of the analysis scripts use the original two-letter family ids (for example 11jj); this table maps them.
+The campaign (1,066 registered runs plus one excluded batch of 60) is organised in experiment families. Each file name carries a descriptive family name. The pre-registration document and the bodies of the analysis scripts use the original two-letter family ids (for example 11jj); this table maps them.
 
 | Family (id in file bodies and in the pre-registration) | File prefix | Content | Paper section |
 |---|---|---|---|
@@ -19,6 +19,8 @@ The campaign (850 registered runs plus one excluded batch of 60) is organised in
 | 11pp | history_weighted | History-weighted per-sender bucket, six scenarios | VI-B |
 | 11qq | matched_operating_points | Operating-point sweeps per policy family on the attack-only Besu cell (19 arms); its blocks LR5 and LR10 contain 400 attack requests like the main cell (module granularity) and are replicates, not low-rate results | VI-B |
 | 11rr | lowrate_and_realsize_replay | Sustained low-rate attack (every 3rd/6th slot) and replay of the calldata-size distribution of public mainnet transactions (with and without attack) | VI-B, Appendix B |
+| 11ss | operating_point_sweeps_other_cells | Operating-point sweeps on the mixed, ZGC and Nethermind cells; low-rate attack over twelve accounts (synchronized arrivals) | VI-B |
+| 11tt | comparison_policies_gate_outage | CPU-ramp (DAGOR-style) and circuit-breaker comparison policies, a supervised gradient-boosting detector in the live gate, fail-open versus fail-closed gate during a 20 s gate freeze | VI-B, VI-C |
 
 ## Folders
 - `results/`: per-run tables (one row per run: counts of attack, look-alike and ordinary requests by outcome, survival fields, GC pause), results reports with paired differences and per-pair values, findings notes with the allowed and not-allowed wording of each result, metric definitions, and the output of the independent consistency check of every run (`verification_*`).
@@ -43,3 +45,6 @@ MIT License (see `LICENSE`). The data tables and documents are released under th
 
 ## Added in v1.1
 Families 11qq and 11rr (above): per-run tables, analysis scripts, the workload module with the two new optional modes (`apparatus/raacV5BurstReal.js`), the size sample used for the replay (`apparatus/real_sizes.json`, calldata lengths only), the read-only block-sampling script and the sampled lengths (`results/realtrace/`), the self-check and pin files, and the registration sections 11qq and 11rr. The sampled blocks were read from a public node with read-only calls; nothing was sent to the main network. Launch scripts and raw run directories are still not included.
+
+## Added in v1.2
+Families 11ss and 11tt: per-run tables, summaries, analysis scripts, self-check and pin files, the workload module with the fail-closed option (`apparatus/tt/`), the supervised-detector service files and the trained artifact (`apparatus/sup_service/`, deterministic training script), the pressure-loop description (`results/findings_pressure_loop_dynamics.md`) and the registration sections 11ss and 11tt with their amendments. Launch scripts and raw run directories are still not included.
