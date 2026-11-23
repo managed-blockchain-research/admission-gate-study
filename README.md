@@ -1,6 +1,6 @@
 # Admission-gate study: data, scripts and apparatus
 
-Companion material for the manuscript "What Can an Admission Gate Separate? A Controlled Characterization of Policies for Calldata-Heavy Transactions in Managed Ethereum Clients".
+Companion material for the manuscript "Admission Control for Calldata-Heavy Transactions in Managed Ethereum Clients: What Can a Gate Separate, and at What Cost?".
 
 The campaign (1,066 registered runs plus one excluded batch of 60) is organised in experiment families. Each file name carries a descriptive family name. The pre-registration document and the bodies of the analysis scripts use the original two-letter family ids (for example 11jj); this table maps them.
 
