@@ -2,7 +2,7 @@
 
 Companion material for the manuscript "Admission Control for Calldata-Heavy Transactions in Managed Ethereum Clients: What Can a Gate Separate, and at What Cost?".
 
-The campaign (1,066 registered runs plus one excluded batch of 60) is organised in experiment families. Each file name carries a descriptive family name. The pre-registration document and the bodies of the analysis scripts use the original two-letter family ids (for example 11jj); this table maps them.
+The campaign (1,591 registered runs plus one excluded batch of 60) is organised in experiment families. Each file name carries a descriptive family name. The pre-registration document and the bodies of the analysis scripts use the original two-letter family ids (for example 11jj); this table maps them.
 
 | Family (id in file bodies and in the pre-registration) | File prefix | Content | Paper section |
 |---|---|---|---|
@@ -21,6 +21,14 @@ The campaign (1,066 registered runs plus one excluded batch of 60) is organised 
 | 11rr | lowrate_and_realsize_replay | Sustained low-rate attack (every 3rd/6th slot) and replay of the calldata-size distribution of public mainnet transactions (with and without attack) | VI-B, Appendix B |
 | 11ss | operating_point_sweeps_other_cells | Operating-point sweeps on the mixed, ZGC and Nethermind cells; low-rate attack over twelve accounts (synchronized arrivals) | VI-B |
 | 11tt | comparison_policies_gate_outage | CPU-ramp (DAGOR-style) and circuit-breaker comparison policies, a supervised gradient-boosting detector in the live gate, fail-open versus fail-closed gate during a 20 s gate freeze | VI-B, VI-C |
+| 11uu | confirmation_latency_first_batch | Confirmation latency, attack-only / mixed / replayed-size cells (first batch; effective receipt limit 90 s because the deployment script overwrote the client setting) | VI-D |
+| 11ww | confirmation_latency | Repeat of the latency experiment with the receipt limit set after the deployment (240 s, audited); used in the paper | VI-D |
+| 11vv | attacker_variants | Staggered arrivals over twelve accounts, attack sizes below and above the threshold, rising and stepped rates | VI-D |
+| 11xx | sender_history_matched_sweeps | Per-sender buckets 10-400 kB/s and five history-weighted settings in four sender scenarios | VI-D |
+| 11yy | deferral_limit_sweep | Deferral limit sweep (30-300 s, shaper 250 kB/s) on attack-only, look-alike-only and mixed streams | VI-D |
+| 11zz | public_day_arrival_replay | Replay of per-second arrival counts of two 240 s windows of one public day with replayed calldata sizes | VI-D |
+| 11aaa | pressure_step_response | Step of the rejection probability (0.2/0.4/0.6) and a control arm; static loop gain | VI-D |
+| 11aab | two_node_loopback | Two Besu nodes on one host as loopback peers, gate in front of node A only; attack to the gated or the ungated node | VI-D |
 
 ## Folders
 - `results/`: per-run tables (one row per run: counts of attack, look-alike and ordinary requests by outcome, survival fields, GC pause), results reports with paired differences and per-pair values, findings notes with the allowed and not-allowed wording of each result, metric definitions, and the output of the independent consistency check of every run (`verification_*`).
@@ -48,3 +56,6 @@ Families 11qq and 11rr (above): per-run tables, analysis scripts, the workload m
 
 ## Added in v1.2
 Families 11ss and 11tt: per-run tables, summaries, analysis scripts, self-check and pin files, the workload module with the fail-closed option (`apparatus/tt/`), the supervised-detector service files and the trained artifact (`apparatus/sup_service/`, deterministic training script), the pressure-loop description (`results/findings_pressure_loop_dynamics.md`) and the registration sections 11ss and 11tt with their amendments. Launch scripts and raw run directories are still not included.
+
+## Added in v1.3
+Families 11uu, 11ww, 11vv, 11xx, 11yy, 11zz, 11aaa and 11aab (table above): per-run tables (latency, attacker variants, sender and history sweeps, deferral limit sweep, arrival replay, two-node cell), results reports, analysis scripts (including the per-run table scripts and the static loop-gain script), self-check and pin files, the workload modules with the staggered/size/rate options (`apparatus/attacker_variants_module/`), the arrival-replay mode and the public-day windows (`apparatus/arrival_replay_module/`), the two-node mode (`apparatus/two_node_module/`), the step-input policy service (`apparatus/step_service/`), the public-mempool one-day summary (`results/findings_public_mempool_day.md`; metadata of a public archive only, nothing was sent to a network) and the registration sections 11uu to 11aab with their amendments. The two-node cell contains 30 runs; one further run that was refused at start because the nodes had not connected was repeated with the same seed (the refused directory is kept internally). Launch scripts and raw run directories are still not included.

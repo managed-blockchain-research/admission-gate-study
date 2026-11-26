@@ -1,0 +1,148 @@
+{
+ "files": {
+  "acc/acc_raac_run_11xx.sbatch": "b11523fe0807572c3564c73e9184b724a4e55156cc363cff242a5541f02f7b64",
+  "acc/acc_selfcheck_11xx.py": "7381e0dcea070fbec544c71f792de03572a5581cf459ae978345bb2367927bf0",
+  "acc/acc_raac_checked_11xx.sbatch": "b8a401777ca0f4a778e0a0040adaacf44a7753768153c3ae748a2548be002433",
+  "acc/pp/raacV5BurstHist.js": "53175dab4887ff2fb661420ec2780e44ca750b41190b76d8e1a5ab6cc5d4b301",
+  "acc/pp/hist_service/serve_unified.py": "281e8888c9dc2938e858a05aebcd759296c02aa91d39bc526a378330b20b3e37",
+  "acc/pp/hist_service/detlib.py": "eef45659fc4b8d788772954b42c329081341eca14b472d2706ac13911fa2ed32",
+  "acc/pp/hist_service/ml_model.py": "07620e10c666ae18d4e2b29ecb41c1b85c864bdad7e3d5987d3ba498579aec31",
+  "acc/mm/sender_service/serve_unified.py": "6f080517804edcf5ddb3429e74bbeb6ba7e6c9be68d21c4eed3d3eede6ac500a",
+  "acc/mm/sender_service/detlib.py": "eef45659fc4b8d788772954b42c329081341eca14b472d2706ac13911fa2ed32",
+  "acc/mm/sender_service/ml_model.py": "07620e10c666ae18d4e2b29ecb41c1b85c864bdad7e3d5987d3ba498579aec31"
+ },
+ "besu_main_jar_sha256": "2438c9a018b63e43ef802754c4e74782559b98e869643762a245868c6d05e01e",
+ "nm_bin": "./impl/nm/bin",
+ "nm_dll_sha256": "4ad770c8c18a889ecbb8c321d51f0ea6addc35b970afbf9c0155f2fc36eb6199",
+ "nm_txpool_sha256": "6923d71114a90678f6b4751f3162bd7bb05d79eed00b5d08f336625144ce35c8",
+ "blocks": {
+  "Y1": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    67301,
+    67303
+   ],
+   "smoke_seed": 67395,
+   "burst": "hist",
+   "A0": 60,
+   "A1": 180,
+   "af": "",
+   "nA": 2,
+   "nL": 6,
+   "warm": 0,
+   "fresh": 0,
+   "arms": [
+    "none",
+    "SizeStatic",
+    "SenderLow10",
+    "SenderR25",
+    "SenderR50",
+    "SenderBucket",
+    "SenderR200",
+    "SenderHigh400",
+    "HistBucket",
+    "HistH50",
+    "HistH200",
+    "HistLow25",
+    "HistHigh200"
+   ]
+  },
+  "Y2": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    67311,
+    67313
+   ],
+   "smoke_seed": 67395,
+   "burst": "hist",
+   "A0": 60,
+   "A1": 180,
+   "af": "",
+   "nA": 12,
+   "nL": 6,
+   "warm": 0,
+   "fresh": 0,
+   "arms": [
+    "none",
+    "SizeStatic",
+    "SenderLow10",
+    "SenderR25",
+    "SenderR50",
+    "SenderBucket",
+    "SenderR200",
+    "SenderHigh400",
+    "HistBucket",
+    "HistH50",
+    "HistH200",
+    "HistLow25",
+    "HistHigh200"
+   ]
+  },
+  "Y3": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    67321,
+    67323
+   ],
+   "smoke_seed": 67395,
+   "burst": "hist",
+   "A0": 60,
+   "A1": 180,
+   "af": "",
+   "nA": 12,
+   "nL": 6,
+   "warm": 10,
+   "fresh": 0,
+   "arms": [
+    "none",
+    "SizeStatic",
+    "SenderLow10",
+    "SenderR25",
+    "SenderR50",
+    "SenderBucket",
+    "SenderR200",
+    "SenderHigh400",
+    "HistBucket",
+    "HistH50",
+    "HistH200",
+    "HistLow25",
+    "HistHigh200"
+   ]
+  },
+  "Y6": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    67331,
+    67333
+   ],
+   "smoke_seed": 67395,
+   "burst": "hist",
+   "A0": 60,
+   "A1": 180,
+   "af": "",
+   "nA": 2,
+   "nL": 6,
+   "warm": 0,
+   "fresh": 1,
+   "arms": [
+    "none",
+    "SizeStatic",
+    "SenderLow10",
+    "SenderR25",
+    "SenderR50",
+    "SenderBucket",
+    "SenderR200",
+    "SenderHigh400",
+    "HistBucket",
+    "HistH50",
+    "HistH200",
+    "HistLow25",
+    "HistHigh200"
+   ]
+  }
+ }
+}

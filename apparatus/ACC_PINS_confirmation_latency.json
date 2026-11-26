@@ -1,0 +1,108 @@
+{
+ "files": {
+  "acc/acc_raac_run_11ww.sbatch": "95c7b10e455b1e5653ca5cbaf0533732bc863258b313f832f703797ba2fc6477",
+  "acc/acc_selfcheck_11ww.py": "29a419b72f8d5cabba1550cd33ff62460a51093d9822e062abe883bb9b8d7780",
+  "acc/acc_raac_checked_11ww.sbatch": "28d697dfb514cf57fdcd7ef7457039b3c9a38cbf2c9f773d2dc38cb6f89a19c3",
+  "acc/jj/raacV5BurstMixed.js": "1e26cd041139f34b63c41d35d015786d782effd12048796081f2175f4ec6320b",
+  "acc/jj/raacV5BurstOracleMixed.js": "48b172562d3e49fbab618cf7ddb9adcf17556092548b35736e27eabf165fe480",
+  "acc/jj/sticky_service/serve_unified.py": "633dec166447ecc360e2a6bc9742ed5e11ac2ae8b4e2b4b6d6e3bcb4056aee61",
+  "acc/jj/sticky_service/detlib.py": "eef45659fc4b8d788772954b42c329081341eca14b472d2706ac13911fa2ed32",
+  "acc/jj/sticky_service/ml_model.py": "07620e10c666ae18d4e2b29ecb41c1b85c864bdad7e3d5987d3ba498579aec31",
+  "acc/kk/budget_service/serve_unified.py": "a2db678513505a6bf9167f00d5435fddfc9343efff7a106948801cc08bafbb99",
+  "acc/kk/budget_service/detlib.py": "eef45659fc4b8d788772954b42c329081341eca14b472d2706ac13911fa2ed32",
+  "acc/kk/budget_service/ml_model.py": "07620e10c666ae18d4e2b29ecb41c1b85c864bdad7e3d5987d3ba498579aec31",
+  "acc/tt/raacV5BurstReal.js": "2e6b5e03173ead9e567cdaac66538688049d8e54b0941174fa585adcbfc65d49",
+  "acc/tt/sup_service/serve_unified.py": "a2db678513505a6bf9167f00d5435fddfc9343efff7a106948801cc08bafbb99",
+  "acc/tt/sup_service/detlib.py": "eef45659fc4b8d788772954b42c329081341eca14b472d2706ac13911fa2ed32",
+  "acc/tt/sup_service/ml_model.py": "1c9984b006e3a851641f66e07e15e776115e5a01e2db4831a0e3fa1a8d0cd0ff",
+  "acc/tt/sup_service/sup_gb.joblib": "14e67fd76a74a56dc6f7c5f66de0ee4736d009df92bfae5b8a63eb87aa0ddbfc",
+  "acc/tt/sup_service/sup_manifest.json": "64418200825f76d0841f17fbb8a71d5a91417b9aaa253a14348d64f148ffeb83",
+  "acc/tt/sup_service/train_supervised.py": "f32fe3939290be76f016b85aceb4aaf99f0fd9dc38cea506d86e847136790531"
+ },
+ "besu_main_jar_sha256": "2438c9a018b63e43ef802754c4e74782559b98e869643762a245868c6d05e01e",
+ "nm_bin": "./impl/nm/bin",
+ "nm_dll_sha256": "4ad770c8c18a889ecbb8c321d51f0ea6addc35b970afbf9c0155f2fc36eb6199",
+ "nm_txpool_sha256": "6923d71114a90678f6b4751f3162bd7bb05d79eed00b5d08f336625144ce35c8",
+ "blocks": {
+  "LQ1": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    67701,
+    67703
+   ],
+   "smoke_seed": 67795,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.0333",
+   "arms": [
+    "none",
+    "SizeStatic",
+    "BudgetR125",
+    "BudgetR250",
+    "PressureOnly",
+    "RandP20",
+    "RandP40",
+    "SizeFixedP40"
+   ],
+   "em": "",
+   "rm": "",
+   "fc": "",
+   "ss": "",
+   "sd": "",
+   "lt": "240"
+  },
+  "LMX": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    67711,
+    67713
+   ],
+   "smoke_seed": 67795,
+   "burst": "mixed",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.1",
+   "arms": [
+    "none",
+    "SizeStatic",
+    "BudgetR250",
+    "PressureOnly",
+    "RandP40",
+    "SizeFixedP40"
+   ],
+   "em": "",
+   "rm": "",
+   "fc": "",
+   "ss": "",
+   "sd": "",
+   "lt": "240"
+  },
+  "LRM": {
+   "kind": "besu",
+   "token_re": "^besu:512m:100:g1:OFF:36:125000000:(\\d+):C:new:$",
+   "seeds": [
+    67721,
+    67723
+   ],
+   "smoke_seed": 67795,
+   "burst": "attack",
+   "A0": 60,
+   "A1": 180,
+   "af": "0.0333",
+   "arms": [
+    "none",
+    "SizeStatic",
+    "PressureOnly"
+   ],
+   "em": "",
+   "rm": "true",
+   "fc": "",
+   "ss": "",
+   "sd": "",
+   "lt": "240"
+  }
+ }
+}
